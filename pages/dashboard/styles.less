@@ -1,0 +1,116 @@
+@import '../../utils/colors.less';
+
+.dashboard {
+  background-color: @background;
+  box-shadow: inset 0 6px 14px 0 @header-shadow;
+  height: calc(100% - 77px);
+  padding: 4rem 18%;
+
+  >div {
+    padding-bottom: 20px;
+    border-bottom: 1px solid @table-border;
+
+    table {
+      padding-top: 130px;
+
+      thead {
+        border-bottom: 2px solid @table-header-text;
+
+        th {
+          font-weight: 600;
+          font-size: 1.3rem;
+          padding: .2rem .75rem;
+
+          &:nth-child(4) {
+            width: 100px;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          cursor: pointer;
+
+          td {
+            color: @table-header-dark;
+            font-weight: 600;
+            font-size: 1.3rem;
+
+            .action-button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 1.8rem;
+              height: 1.8rem;
+              background: @primary;
+              border-radius: 50%;
+
+              svg {
+                font-size: .9rem;
+                color: white;
+              }
+            }
+          }
+
+          .no-data-row {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .button-wrapper {
+      padding-left: 130px;
+    }
+
+    .simple-button {
+      margin-right: 15px;
+      border-radius: .2rem;
+      border: 1px solid @dropdown-shadow;
+      background: linear-gradient(@dropdown-bg-start, @dropdown-bg-end);
+      font-weight: 600;
+      padding: .3rem .8rem;
+
+      &:active {
+        background: linear-gradient(@dropdown-bg-end, @dropdown-bg-start);
+        box-shadow: inset 0 1px 5px 0 @header-shadow;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .text-uppercase {
+      text-decoration: uppercase;
+    }
+
+    .active {
+      background-color: @table-active;
+    }
+
+    .non-active:hover {
+      background-color: white;
+    }
+
+    .small-btn {
+      font-size: 1.1rem;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      height: 30px;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .clients-caption {
+      color: @logo-text;
+      font-size: 2rem;
+    }
+  }
+}
+
+.nav-item {
+  margin-right: 15px;
+}

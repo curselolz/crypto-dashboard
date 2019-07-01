@@ -1,0 +1,59 @@
+@import '../../utils/colors.less';
+
+.account-settings {
+  background-color: @background;
+  height: calc(100% - 77px);
+  box-shadow: inset 0 6px 14px 0 @header-shadow;
+
+  .account-inner {
+    margin-top: 60px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    button {
+      margin-bottom: 10px;
+    }
+
+    .list-settings {
+      width: 100%;
+      list-style-type: none;
+    }
+
+    .account-caption {
+      color: @logo-text;
+      font-size: 1.5rem;
+    }
+
+    table {
+      thead {
+        border-bottom: 2px solid @table-header-text;
+
+        th {
+          width: 30%;
+          font-weight: 600;
+          font-size: 1.2rem;
+          padding: .2rem .75rem;
+
+          &:nth-child(4) {
+            width: 100px;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            color: @table-header-dark;
+            font-weight: 600;
+          }
+
+          .no-data-row {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

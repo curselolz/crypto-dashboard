@@ -1,0 +1,66 @@
+@import '../../utils/colors.less';
+
+.form-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+
+  .hr-line {
+    height: 1px;
+    width:45%;
+    background-color:@step-nav;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  .form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 69%;
+    background-color:white;
+    padding: 34px;
+
+    .form-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .form-plan-input {
+        background-color: @small-card-input-background;
+      }
+        .dropdown {
+          width: 100%;
+
+          .dropdown-menu {
+            width: 100%;
+          }
+
+          button, button:active {
+            width: 100%;
+          }
+
+          input {
+            width: 100%;
+            cursor: pointer;
+          }
+        }
+    }
+  }
+}
+
+.form-caption-text {
+  font-size: 1.5rem;
+  color:@primary;
+}
+
+.caption {
+  font-size: 1.2rem;
+}
+
+textarea.form-control {
+  height: 170px;
+}

@@ -1,0 +1,121 @@
+
+@import '../../utils/colors.less';
+
+.stripe-form {
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 100px 1px @card-shadow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px 20px;
+    color: @text-color;
+    width: 100%;
+    height: 100%;
+    max-width: 520px;
+    min-width: 400px;
+    margin-right: 20px;
+
+    h3 {
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+
+    .amount {
+        font-size: 38px;
+        font-weight: 600;
+        color: @primary;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        width: 100%;
+
+        label {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .form-control {
+            border: 1px solid @stripe-input-border;
+            border-radius: 3px;
+        }
+
+        input:active, input:focus, input:active:focus {
+            outline: none;
+            box-shadow: 0 0 2px 1px @stripe-input-border;
+        }
+
+        &.bordered {
+            border-bottom: 1px solid @table-border;
+            padding-bottom: 20px;
+
+            label {
+                text-transform: none;
+            }
+        }
+    }
+
+    .cvv-details {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .form-group {
+            width: 45%;
+            position: relative;
+
+            svg {
+                color: @credit-card-icon;
+                font-size: 18px;
+                position: absolute;
+                right: 15px;
+                top: 35px;
+            }
+        }
+    }
+
+    .terms-container {
+        display: flex;
+        text-transform: uppercase;
+        width: 100%;
+        margin: 15px 0 20px;
+
+        button {
+            margin-right: 10px;
+        }
+
+        a {
+            color: @primary;
+            text-decoration: underline;
+        }
+    }
+
+    .btn-success {
+        background: @primary;
+        font-size: 16px;
+        font-weight: 600;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 15px;
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    > img {
+        width: 100px;
+    }
+
+    .disclaimer {
+        color: @primary;
+        text-align: center;
+        margin: 20px 0 10px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}

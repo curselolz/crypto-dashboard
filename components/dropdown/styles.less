@@ -1,0 +1,60 @@
+@import '../../utils/colors.less';
+
+.custom-dropdown, .custom-dropdown:hover, .custom-dropdown:focus {
+    outline: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 28px;
+    color: @text-color;
+    font-weight: 600;
+    border-radius: 2px;
+    border: 1px solid @dropdown-border;
+    // background-image: linear-gradient(@dropdown-bg-start, @dropdown-bg-end);
+    //box-shadow: 1px 1px 1px 1px @dropdown-shadow;
+
+    > input {
+        // background-image: linear-gradient(@dropdown-bg-start, @dropdown-bg-end);
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0;
+        border: none;
+        overflow: hidden;
+        height: 28px;
+        background-color: @small-card-input-background;
+    }
+
+    > span {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .arrows {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        min-width: 30px;
+        height: 31px;
+        border-left: 1px solid @dropdown-border;
+
+        svg {
+            height: 8px;
+        }
+    }
+}
+
+.small-card {
+    .custom-dropdown {
+        input {
+            background: @small-card-input-background;
+        }
+    }
+}
+
+.dropdown-menu {
+    height: 200px;
+    overflow-y: auto;
+}

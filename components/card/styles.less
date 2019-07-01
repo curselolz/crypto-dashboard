@@ -1,0 +1,50 @@
+@import '../../utils/colors.less';
+
+.card {
+    max-width: 300px;
+    padding: 1rem 1.25rem;
+    margin-right: 1rem;
+    color: @small-card-description;
+    border: none;
+    box-shadow: 0px 0px 80px 0px @card-shadow;
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: @text-color;
+    }
+
+    .card-subtitle {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 2px solid @small-card-border;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .card-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        ul {
+            margin-bottom: 20px;
+
+            li {
+                display: flex;
+
+                svg {
+                    font-size: 1.2rem;
+                    color: @benefit-color;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        button {
+            text-transform: uppercase;
+        }
+    }
+}

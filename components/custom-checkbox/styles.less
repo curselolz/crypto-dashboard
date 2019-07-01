@@ -1,0 +1,21 @@
+@import '../../utils/colors.less';
+
+.large-checkbox, .large-checkbox:active, .large-checkbox:focus, .large-checkbox:active:focus {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid @checkbox-border;
+    box-shadow: 0 1px 12px 1px @checkbox-shadow;
+    background: linear-gradient(@checkbox-background-start, @checkbox-background-end);
+    position: relative;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+
+    svg {
+        color: @checkbox-color;
+        position: absolute;
+        left: 1px;
+        top: -4px;
+    }
+}

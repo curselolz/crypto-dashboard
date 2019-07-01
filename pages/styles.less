@@ -1,0 +1,241 @@
+@import '../utils/colors.less';
+
+@font-face {
+    font-family: 'HelveticaNeue-Bold';
+    src: url('../../public/fonts/HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'), url('../../public/fonts/HelveticaNeue-Bold.woff') format('woff'), url('../../public/fonts/HelveticaNeue-Bold.ttf') format('truetype'), url('../../public/fonts/HelveticaNeue-Bold.svg#HelveticaNeue-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Light';
+    src: url('../../public/fonts/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'), url('../../public/fonts/HelveticaNeue-Light.woff') format('woff'), url('../../public/fonts/HelveticaNeue-Light.ttf') format('truetype'), url('../../public/fonts/HelveticaNeue-Light.svg#HelveticaNeue-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyriadPro-Regular';
+    src: url('../../public/fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), url('../../public/fonts/MyriadPro-Regular.otf') format('opentype'),
+        url('../../public/fonts/MyriadPro-Regular.woff') format('woff'), url('../../public/fonts/MyriadPro-Regular.ttf') format('truetype'), url('../../public/fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// --- generic tags ---
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+html {
+    display: grid;
+}
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    color: @text-color;
+    font-size: 14px;
+    font-family: 'MyriadPro-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#TaxTokenApp {
+    height: 100%;
+}
+
+.main-container {
+    height: 100%;
+}
+
+.page-header {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    label {
+        font-weight: 600;
+    }
+
+    .form-control {
+        border-radius: .2rem;
+    }
+}
+
+.input-bg {
+    border: 1px solid @dropdown-shadow;
+    background: linear-gradient(@dropdown-bg-start, @dropdown-bg-end);
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.notification {
+    width: auto;
+    max-width: 280px;
+    bottom: 6em;
+
+    >div {
+        border-radius: .25rem;
+        border: 1px solid transparent;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        float: right;
+
+        .Toastify__toast-body {
+            margin-right: 10px;
+        }
+
+        .Toastify__progress-bar {
+            visibility: hidden;
+        }
+    }
+
+    .Toastify__toast--error {
+        color: @notification-error-text;
+        background-color: @notification-error-background;
+        border-color: @notification-error-border;
+
+        .Toastify__close-button {
+            color: @notification-error-text;
+        }
+    }
+
+    .Toastify__toast--success {
+        color: @notification-success-text;
+        background-color: @notification-success-background;
+        border-color: @notification-success-border;
+
+        .Toastify__close-button {
+            color: @notification-success-text;
+        }
+    }
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    .modal-btn-close {
+      border: none;
+      border-radius: .6rem;
+    }
+    .modal-dialog {
+        max-width: auto;
+        justify-content: center;
+        align-content: center;
+
+    }
+    span {
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  
+    .modal-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 25px 20px 25px;
+  
+      >p {
+        text-align: center;
+        margin-bottom: 15px;
+        line-height: 1.4rem;
+      }
+  
+      .modal-actions {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+  
+      button {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  
+    .modal-invite {
+      max-width: 300px;
+    }
+  }
+
+  .btn {
+    border-radius: 40px;
+
+  }
